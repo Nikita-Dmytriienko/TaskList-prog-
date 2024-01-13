@@ -63,19 +63,19 @@ void TaskList::ShowMenu()
         switch (choice)
         {
         case 1:
-            AddTask();
+            std::cout << "AddTask()";
             break;
         case 2:
-            RemoveTask();
+            std::cout << "RemoveTask()";
             break;
         case 3:
-            ShowTasks();
+            std::cout << "ShowTasks()";
             break;
         case 4:
-            TaskStatusSorting();
+            std::cout << "TaskStatusSorting()";
             break;
         case 5:
-            TaskDeadlineSorting();
+            std::cout << "TaskDeadlineSorting()";
             break;
         case 0:
             std::cout << "Exiting Task Manager. Goodbye!" << std::endl;

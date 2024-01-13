@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 #include <string>
 //Класс Задача (Task):
 
@@ -20,7 +21,7 @@ public:
     std::string TaskName() const { return taskName; }
     void TaskName(const std::string& name) { taskName = name; }
 
-    std::string Description() const { return description; }
+    std::string Description() { return description; }
     void Description(const std::string& desc) { description = desc; }
 
     bool Status() const { return status; }
