@@ -12,7 +12,6 @@ public:
 	TaskList();
 	void AddTask();
 	void RemoveTask();
-	void ShowTask() const;
 	void TaskStatusSorting();
 	void TaskDeadlineSorting();
 	void ShowTasks() const;

@@ -5,8 +5,9 @@
 
 int main()
 {
-
-
+	Task task;
+	TaskList taskList; // Создаем объект класса TaskList
+	taskList.ShowMenu(); // Вызываем метод ShowMenu
 
 
 

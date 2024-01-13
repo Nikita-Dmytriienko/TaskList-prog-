@@ -1,5 +1,6 @@
 #include <iostream>
 #include "TaskList.h"
+#include "Task.h"
 
 TaskList::TaskList()
 { }
@@ -18,7 +19,6 @@ void TaskList::AddTask()
 
     // ѕо умолчанию нова€ задача создаетс€ не выполненной и без срока выполнени€
     newTask.status = false;
-    newTask.inProcess = false;
     newTask.deadline = false;
 
     // ƒобавл€ем новую задачу в список
@@ -28,10 +28,6 @@ void TaskList::AddTask()
 }
 
 void TaskList::RemoveTask()
-{
-}
-
-void TaskList::ShowTask() const
 {
 }
 
@@ -45,7 +41,48 @@ void TaskList::TaskDeadlineSorting()
 
 void TaskList::ShowMenu() const
 {
-	std::cout << "";
+    int choice;
+
+    do
+    {
+        // ќтображаем меню
+        std::cout << "===== Task Manager Menu =====" << std::endl;
+        std::cout << "1. Add Task" << std::endl;
+        std::cout << "2. Delete Task" << std::endl;
+        std::cout << "3. Show Tasks" << std::endl;
+        std::cout << "4. Task Status Sorting" << std::endl;
+        std::cout << "5. Task Deadline Sorting" << std::endl;
+        std::cout << "0. Exit" << std::endl;
+        std::cout << "==============================" << std::endl;
+        std::cout << "Enter your choice: ";
+        std::cin >> choice;
+
+        // ќбрабатываем выбор пользовател€
+        switch (choice)
+        {
+        case 1:
+            AddTask();
+            break;
+        case 2:
+            DeleteTask();
+            break;
+        case 3:
+            ShowTasks();
+            break;
+        case 4:
+            TaskStatusSorting();
+            break;
+        case 5:
+            TaskDeadlineSorting();
+            break;
+        case 0:
+            std::cout << "Exiting Task Manager. Goodbye!" << std::endl;
+            break;
+        default:
+            std::cout << "Invalid choice. Please enter a valid option." << std::endl;
+        }
+
+    } while (choice != 0);
 }
 
 void TaskList::ShowTasks() const
