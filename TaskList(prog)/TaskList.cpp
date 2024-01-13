@@ -64,7 +64,7 @@ void TaskList::ShowMenu()
             AddTask();
             break;
         case 2:
-            DeleteTask();
+            RemoveTask();
             break;
         case 3:
             ShowTasks();
@@ -85,7 +85,23 @@ void TaskList::ShowMenu()
     } while (choice != 0);
 }
 
-void TaskList::ShowTasks() const
+void TaskList::ShowTasks()
 {
-	std::cout << "Your Tasks:"<<std::endl;
+    std::cout << "Your Tasks:" << std::endl;
+
+    if (tasks.empty()) // Проверяем, есть ли задачи в списке
+    {
+        std::cout << "No tasks found." << std::endl;
+    }
+    else
+    {
+        for (const Task& task : tasks)
+        {
+            std::cout << "Task Name: " << task.TaskName() << std::endl;
+            std::cout << "Description: " << task.Description() << std::endl;
+            std::cout << "Status: " << (task.Status() ? "Completed" : "Not Completed") << std::endl;
+            std::cout << "Deadline: " << (task.Deadline() ? "Set" : "Not Set") << std::endl;
+            std::cout << "------------------------" << std::endl;
+        }
+    }
 }

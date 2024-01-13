@@ -14,7 +14,7 @@ public:
 	void RemoveTask();
 	void TaskStatusSorting();
 	void TaskDeadlineSorting();
-	void ShowTasks() const;
+	void ShowTasks();
 	void ShowMenu();
 };
 
