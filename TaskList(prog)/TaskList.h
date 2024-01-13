@@ -1,4 +1,6 @@
 #pragma once
+#include <vector>
+#include "Task.h"
 /*—оздайте класс TaskList, представл€ющий список задач.
 ¬ключите методы дл€ добавлени€, удалени€ и отображени€ задач в списке.
 –еализуйте методы дл€ сортировки задач по различным критери€м (например, по статусу или сроку выполнени€).*/
@@ -7,11 +9,13 @@ class TaskList
 private:
 
 public:
+	TaskList();
 	void AddTask();
-	void DeleteTask();
+	void RemoveTask();
 	void ShowTask() const;
 	void TaskStatusSorting();
 	void TaskDeadlineSorting();
-
+	void ShowTasks() const;
+	void ShowMenu() const;
 };
 
