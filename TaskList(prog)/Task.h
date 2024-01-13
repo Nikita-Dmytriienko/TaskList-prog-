@@ -18,17 +18,25 @@ public:
 	bool deadline;
 
 
-    std::string TaskName() const { return taskName; }
-    void TaskName(const std::string& name) { taskName = name; }
+    std::string TaskName() const 
+    { return taskName; }
+    void TaskName(const std::string& name) 
+    { taskName = name; }
 
-    std::string Description() { return description; }
-    void Description(const std::string& desc) { description = desc; }
+    std::string Description()
+    { return description; }
+    void Description(const std::string& desc) 
+    { description = desc; }
 
-    bool Status() const { return status; }
-    void SetStatus(bool newStatus) { status = newStatus; }
+    bool Status() const 
+    { return status; }
+    void SetStatus(bool newStatus)
+    { status = newStatus; }
 
-    bool Deadline() const { return deadline; }
-    void SetDeadline(bool newDeadline) { deadline = newDeadline; }
+    bool Deadline() const 
+    { return deadline; }
+    void SetDeadline(bool newDeadline) 
+    { deadline = newDeadline; }
 
     friend std::istream& operator>>(std::istream& is, Task& task)
     {
