@@ -9,17 +9,19 @@ void TaskList::AddTask()
 {
     Task newTask; // Создаем новый объект задачи
 
-    // Заполняем атрибуты задачи. Для примера, предположим, что мы заполняем их с клавиатуры.
+    // Заполняем атрибуты задачи
     std::cout << "Enter task name: ";
-    std::cin >> newTask.taskName;
+    std::cin >> newTask;
 
     std::cout << "Enter task description: ";
     std::cin.ignore(); // Игнорируем предыдущий символ новой строки
-    std::cin.getline(newTask.description, 255);
+    std::string description;
+    std::getline(std::cin, description);
+    newTask.Description(description);
 
     // По умолчанию новая задача создается не выполненной и без срока выполнения
-    newTask.status = false;
-    newTask.deadline = false;
+    newTask.SetStatus(false);
+    newTask.SetDeadline(false);
 
     // Добавляем новую задачу в список
     tasks.push_back(newTask);

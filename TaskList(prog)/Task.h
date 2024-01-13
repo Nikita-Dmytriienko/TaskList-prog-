@@ -12,7 +12,7 @@ private:
 	
 public:
 	std::string taskName;
-	char description[255];
+    std::string description;
 	bool status;
 	bool deadline;
 
@@ -20,13 +20,25 @@ public:
     std::string TaskName() const { return taskName; }
     void TaskName(const std::string& name) { taskName = name; }
 
-    const char* Description() const { return description; }
-    void Description(const char* desc) { strncpy(description, desc, sizeof(description)); description[sizeof(description) - 1] = '\0'; }
+    std::string Description() const { return description; }
+    void Description(const std::string& desc) { description = desc; }
 
     bool Status() const { return status; }
     void SetStatus(bool newStatus) { status = newStatus; }
 
     bool Deadline() const { return deadline; }
     void SetDeadline(bool newDeadline) { deadline = newDeadline; }
+
+    friend std::istream& operator>>(std::istream& is, Task& task)
+    {
+        std::cout << "Enter task name: ";
+        is >> task.taskName;
+
+        std::cout << "Enter task description: ";
+        is.ignore(); // Игнорируем предыдущий символ новой строки
+        std::getline(is, task.description);
+
+        return is;
+    }
 };
 
