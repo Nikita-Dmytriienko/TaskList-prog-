@@ -23,7 +23,7 @@ public:
     void TaskName(const std::string& name) 
     { taskName = name; }
 
-    std::string Description()
+    std::string Description()  const 
     { return description; }
     void Description(const std::string& desc) 
     { description = desc; }

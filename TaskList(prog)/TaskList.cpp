@@ -5,7 +5,7 @@
 TaskList::TaskList()
 { }
 
-void TaskList::AddTask()
+void TaskList::AddTask()                                                                                                                                            //AddTask
 {
     Task newTask; // Создаем новый объект задачи
 
@@ -29,19 +29,22 @@ void TaskList::AddTask()
     std::cout << "Task added successfully!" << std::endl;
 }
 
-void TaskList::RemoveTask()
+void TaskList::RemoveTask()                                                     //RemoveTask
 {
+    std::cout << "RemoveTask()";
 }
 
-void TaskList::TaskStatusSorting()
+void TaskList::TaskStatusSorting()                                          // TaskStatusSorting
 {
+    std::cout << "TaskStatusSorting()";
 }
 
-void TaskList::TaskDeadlineSorting()
+void TaskList::TaskDeadlineSorting()                                    //TaskDeadlineSorting
 {
+    std::cout << "TaskDeadlineSorting()";
 }
 
-void TaskList::ShowMenu()
+void TaskList::ShowMenu()                                                   //ShowMenu
 {
     int choice;
 
