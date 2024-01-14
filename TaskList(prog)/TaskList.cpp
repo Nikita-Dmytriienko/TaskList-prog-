@@ -28,68 +28,6 @@ void TaskList::AddTask()                                                        
 
     std::cout << "Task added successfully!" << std::endl;
 }
-
-void TaskList::RemoveTask()                                                     //RemoveTask
-{
-    std::cout << "RemoveTask()";
-}
-
-void TaskList::TaskStatusSorting()                                          // TaskStatusSorting
-{
-    std::cout << "TaskStatusSorting()";
-}
-
-void TaskList::TaskDeadlineSorting()                                    //TaskDeadlineSorting
-{
-    std::cout << "TaskDeadlineSorting()";
-}
-
-void TaskList::ShowMenu()                                                   //ShowMenu
-{
-    int choice;
-
-    do
-    {
-        // Отображаем меню
-        std::cout << "===== Task Manager Menu =====" << std::endl;
-        std::cout << "1. Add Task" << std::endl;
-        std::cout << "2. Delete Task" << std::endl;
-        std::cout << "3. Show Tasks" << std::endl;
-        std::cout << "4. Task Status Sorting" << std::endl;
-        std::cout << "5. Task Deadline Sorting" << std::endl;
-        std::cout << "0. Exit" << std::endl;
-        std::cout << "==============================" << std::endl;
-        std::cout << "Enter your choice: ";
-        std::cin >> choice;
-
-        // Обрабатываем выбор пользователя
-        switch (choice)
-        {
-        case 1:
-            std::cout << "AddTask()";
-            break;
-        case 2:
-            std::cout << "RemoveTask()";
-            break;
-        case 3:
-            std::cout << "ShowTasks()";
-            break;
-        case 4:
-            std::cout << "TaskStatusSorting()";
-            break;
-        case 5:
-            std::cout << "TaskDeadlineSorting()";
-            break;
-        case 0:
-            std::cout << "Exiting Task Manager. Goodbye!" << std::endl;
-            break;
-        default:
-            std::cout << "Invalid choice. Please enter a valid option." << std::endl;
-        }
-
-    } while (choice != 0);
-}
-
 void TaskList::ShowTasks()
 {
     std::cout << "Your Tasks:" << std::endl;
@@ -110,3 +48,64 @@ void TaskList::ShowTasks()
         }
     }
 }
+
+    void TaskList::RemoveTask()                                                     //RemoveTask
+    {
+        std::cout << "RemoveTask()";
+    }
+
+    void TaskList::TaskStatusSorting()                                          // TaskStatusSorting
+    {
+        std::cout << "TaskStatusSorting()";
+    }
+
+    void TaskList::TaskDeadlineSorting()                                    //TaskDeadlineSorting
+    {
+        std::cout << "TaskDeadlineSorting()";
+    }
+
+    void TaskList::ShowMenu()                                                   //ShowMenu
+    {
+        int choice;
+
+        do
+        {
+            // Отображаем меню
+            std::cout << "===== Task Manager Menu =====" << std::endl;
+            std::cout << "1. Add Task" << std::endl;
+            std::cout << "2. Delete Task" << std::endl;
+            std::cout << "3. Show Tasks" << std::endl;
+            std::cout << "4. Task Status Sorting" << std::endl;
+            std::cout << "5. Task Deadline Sorting" << std::endl;
+            std::cout << "0. Exit" << std::endl;
+            std::cout << "==============================" << std::endl;
+            std::cout << "Enter your choice: ";
+            std::cin >> choice;
+
+            // Обрабатываем выбор пользователя
+            switch (choice)
+            {
+            case 1:
+                std::cout << "AddTask()";
+                break;
+            case 2:
+                std::cout << "RemoveTask()";
+                break;
+            case 3:
+                std::cout << "ShowTasks()";
+                break;
+            case 4:
+                std::cout << "TaskStatusSorting()";
+                break;
+            case 5:
+                std::cout << "TaskDeadlineSorting()";
+                break;
+            case 0:
+                std::cout << "Exiting Task Manager. Goodbye!" << std::endl;
+                break;
+            default:
+                std::cout << "Invalid choice. Please enter a valid option." << std::endl;
+            }
+
+        } while (choice != 0);
+    }
