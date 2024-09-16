@@ -9,7 +9,5 @@ int main()
 	TaskList taskList; // Создаем объект класса TaskList
 	taskList.ShowMenu(); // Вызываем метод ShowMenu
 
-
-
 	return 0;
 }
