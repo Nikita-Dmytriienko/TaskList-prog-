@@ -3,32 +3,32 @@
 #include "Task.h"
 
 TaskList::TaskList()
-{ }
+= default;
 
-void TaskList::AddTask()                                                                                                                                            //AddTask
+void TaskList::add_task()                                                                                                                                            //AddTask
 {
-    Task newTask; // Создаем новый объект задачи
+    Task new_task; // Создаем новый объект задачи
 
     // Заполняем атрибуты задачи
     std::cout << "Enter task name: ";
-    std::cin >> newTask;
+    std::cin >> new_task;
 
     std::cout << "Enter task description: ";
     std::cin.ignore(); // Игнорируем предыдущий символ новой строки
     std::string description;
     std::getline(std::cin, description);
-    newTask.Description(description);
+    new_task.Description(description);
 
     // По умолчанию новая задача создается не выполненной и без срока выполнения
-    newTask.SetStatus(false);
-    newTask.SetDeadline(false);
+    new_task.SetStatus(false);
+    new_task.SetDeadline(false);
 
     // Добавляем новую задачу в список
-    tasks.push_back(newTask);
+    tasks.push_back(new_task);
 
     std::cout << "Task added successfully!" << std::endl;
 }
-void TaskList::ShowTasks()
+void TaskList::show_tasks() const
 {
     std::cout << "Your Tasks:" << std::endl;
 
@@ -49,36 +49,36 @@ void TaskList::ShowTasks()
     }
 }
 
-    void TaskList::RemoveTask()                                                     //RemoveTask
+    void TaskList::remove_task()                                                     //RemoveTask
     {
         std::cout << "RemoveTask()";
     }
 
-    void TaskList::TaskStatusSorting()                                          // TaskStatusSorting
+    void TaskList::task_status_sorting()                                          // TaskStatusSorting
     {
         std::cout << "TaskStatusSorting()";
     }
 
-    void TaskList::TaskDeadlineSorting()                                    //TaskDeadlineSorting
+    void TaskList::task_deadline_sorting()                                    //TaskDeadlineSorting
     {
         std::cout << "TaskDeadlineSorting()";
     }
 
-    void TaskList::ShowMenu()                                                   //ShowMenu
+    void TaskList::show_menu()                                                   //ShowMenu
     {
         int choice;
 
         do
         {
             // Отображаем меню
-            std::cout << "===== Task Manager Menu =====" << std::endl;
-            std::cout << "1. Add Task" << std::endl;
-            std::cout << "2. Delete Task" << std::endl;
-            std::cout << "3. Show Tasks" << std::endl;
-            std::cout << "4. Task Status Sorting" << std::endl;
-            std::cout << "5. Task Deadline Sorting" << std::endl;
-            std::cout << "0. Exit" << std::endl;
-            std::cout << "==============================" << std::endl;
+            std::cout << "===== Task Manager Menu =====" << "\n";
+            std::cout << "1. Add Task" << "\n";
+            std::cout << "2. Delete Task" << "\n";
+            std::cout << "3. Show Tasks" << "\n";
+            std::cout << "4. Task Status Sorting" << "\n";
+            std::cout << "5. Task Deadline Sorting" << "\n";
+            std::cout << "0. Exit" << "\n";
+            std::cout << "==============================" << "\n";
             std::cout << "Enter your choice: ";
             std::cin >> choice;
 
