@@ -4,12 +4,12 @@
 /*—оздайте класс TaskList, представл€ющий список задач.
 ¬ключите методы дл€ добавлени€, удалени€ и отображени€ задач в списке.
 –еализуйте методы дл€ сортировки задач по различным критери€м (например, по статусу или сроку выполнени€).*/
-class TaskList
+class task_list
 {
 private:
 public:
 	std::vector<Task> tasks;
-	TaskList();
+	task_list();
 	void add_task();
 	static void remove_task();
 	static void task_status_sorting();

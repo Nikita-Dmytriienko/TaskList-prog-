@@ -2,10 +2,10 @@
 #include "TaskList.h"
 #include "Task.h"
 
-TaskList::TaskList()
+task_list::task_list()
 = default;
 
-void TaskList::add_task()                                                                                                                                            //AddTask
+void task_list::add_task()                                                                                                                                            //AddTask
 {
     Task new_task; // Создаем новый объект задачи
 
@@ -28,7 +28,7 @@ void TaskList::add_task()                                                       
 
     std::cout << "Task added successfully!" << std::endl;
 }
-void TaskList::show_tasks() const
+void task_list::show_tasks() const
 {
     std::cout << "Your Tasks:" << std::endl;
 
@@ -49,22 +49,22 @@ void TaskList::show_tasks() const
     }
 }
 
-    void TaskList::remove_task()                                                     //RemoveTask
+    void task_list::remove_task()                                                     //RemoveTask
     {
         std::cout << "RemoveTask()";
     }
 
-    void TaskList::task_status_sorting()                                          // TaskStatusSorting
+    void task_list::task_status_sorting()                                          // TaskStatusSorting
     {
         std::cout << "TaskStatusSorting()";
     }
 
-    void TaskList::task_deadline_sorting()                                    //TaskDeadlineSorting
+    void task_list::task_deadline_sorting()                                    //TaskDeadlineSorting
     {
         std::cout << "TaskDeadlineSorting()";
     }
 
-    void TaskList::show_menu()                                                   //ShowMenu
+    void task_list::show_menu()                                                   //ShowMenu
     {
         int choice;
 
